@@ -1,3 +1,10 @@
 export const environment = {
-  production: true
+  production: true,
+
+  apiUrl: '',
+  apiUrlProperties: 'properties/',
+  apiUrlContactRequests: 'contact_requests/',
+  apiUrlMLSProperties: 'mls_properties/',
+  apiUrlLocations: 'locations/',
+  apiUrlListingStatuses: 'listing_statuses/',
 };
