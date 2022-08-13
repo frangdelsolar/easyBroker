@@ -4,10 +4,10 @@ export const environment = {
     production: false,
 
     apiUrl: 'https://api.stagingeb.com/v1/',
-    apiUrlProperties: 'properties/',
-    apiUrlContactRequests: 'contact_requests/',
-    apiUrlMLSProperties: 'mls_properties/',
-    apiUrlLocations: 'locations/',
-    apiUrlListingStatuses: 'listing_statuses/',
+    apiUrlProperties: 'properties',
+    apiUrlContactRequests: 'contact_requests',
+    apiUrlMLSProperties: 'mls_properties',
+    apiUrlLocations: 'locations',
+    apiUrlListingStatuses: 'listing_statuses',
 };
   
