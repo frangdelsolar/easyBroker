@@ -17,12 +17,14 @@ import { GalleriaModule } from 'primeng/galleria';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './components/header/header.component';
 
 
 const myComponents = [
   ContactFormComponent,
   FooterComponent,
   GalleryComponent,
+  HeaderComponent,
   ToolbarComponent,
 ]
 

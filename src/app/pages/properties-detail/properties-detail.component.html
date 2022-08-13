@@ -1,16 +1,34 @@
-<div class="container">
-  <div class="big-col">
-    <app-gallery [images]="images"></app-gallery>
-  </div>
-  <div class="col">
-    <h2>{{ property.title }}</h2>
-    <strong>{{ property.public_id }}</strong>
-    <p-badge [value]="property.property_type"></p-badge>
+<app-header [text]="property.title"></app-header>
 
-    {{ property.location.name }}
-    <app-contact-form [params]="{ id: property.public_id }"></app-contact-form>
+<div class="flex-center-column">
+  <div class="flex-center-row">
+    <div class="flex-center-column x-col">
+      <app-gallery style="width: 800px" [images]="images"></app-gallery>
+    </div>
+
+    <div class="flex-center-column s-col">
+      <p style="font-size: x-large; margin-bottom: 25px">
+        {{ property.public_id }}
+      </p>
+      <p-badge
+        style="margin-bottom: 25px"
+        [value]="property.property_type"
+      ></p-badge>
+      <p style="font-size: large">
+        <mat-icon aria-hidden="false" fontIcon="pin_drop"></mat-icon>
+        {{ property.location.name }}
+      </p>
+
+      <app-contact-form
+        [params]="{ id: property.public_id }"
+      ></app-contact-form>
+    </div>
   </div>
-</div>
-<div class="description">
-  {{ property.description }}
+
+  <div
+    style="font-size: large; line-height: 30px"
+    class="flex-center-row description"
+  >
+    {{ property.description }}
+  </div>
 </div>

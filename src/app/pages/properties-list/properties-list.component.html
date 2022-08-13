@@ -1,3 +1,5 @@
+<app-header [text]="'Nuestras propiedades publicadas'"></app-header>
+
 <div class="container">
   <div *ngFor="let property of properties | async" class="box">
     <app-property-box [property]="property"></app-property-box>
