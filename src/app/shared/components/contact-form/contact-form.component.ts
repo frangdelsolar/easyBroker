@@ -37,7 +37,8 @@ export class ContactFormComponent implements OnInit {
   onContactFormSubmit(){
     this.contactSvc.create(this.form.value).subscribe(
       (res:any)=>{
-        alert(res.status)
+        alert("Mensaje enviado correctamente")
+        this.form.reset();
       },
       (err)=>{
         alert(err.error.error)
