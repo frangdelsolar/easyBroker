@@ -1,3 +1,5 @@
+export const API_TOKEN = ""
+
 export const environment = {
   production: false,
 

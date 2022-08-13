@@ -1,13 +1,13 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { API_TOKEN } from 'src/environments/environment.local';
-
+import { API_TOKEN } from 'src/environments/environment';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: "root",
 })
-export class ApiService {
+export class PrivateApiService {
   private _headers!: HttpHeaders;
   
 
@@ -24,7 +24,7 @@ export class ApiService {
     }
   }
 
-  public get<T>(url: string, id: number|null, activateHeader: boolean = false): Observable<T> {
+  public get<T>(url: string, id: string|null, activateHeader: boolean = false): Observable<T> {
     if (id != null){
       url = `${url}/${id}/`
     }
@@ -43,7 +43,7 @@ export class ApiService {
       );
   }
 
-  public put<T>(url: string, body: any, id: number, activateHeader: boolean = false): Observable<T> {
+  public put<T>(url: string, body: any, id: string, activateHeader: boolean = false): Observable<T> {
     return this.http.put<T>(
       `${url}/${id}/`, 
       body, 
@@ -59,7 +59,7 @@ export class ApiService {
     );
   }
 
-  public delete<T>(url: string, id: number, activateHeader: boolean = true): Observable<T> {
+  public delete<T>(url: string, id: string, activateHeader: boolean = true): Observable<T> {
     return this.http.delete<T>(
       `${url}/${id}/`,
       activateHeader ? { headers: this._headers } : {}
