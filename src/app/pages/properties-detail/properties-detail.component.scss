@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-col{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}  
+
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    background-color: lightblue;
+    margin: 20px;
+    padding: 30px;
+
+}

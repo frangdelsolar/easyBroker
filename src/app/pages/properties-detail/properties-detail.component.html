@@ -1,7 +1,15 @@
-<strong>{{ property.public_id }}</strong>
-<h3>{{ property.title }}</h3>
-<img
-  [src]="property.property_images[0].url"
-  alt="property.property_images[0].name"
-/>
-<p>{{ property.location.name }}</p>
+<div class="container">
+  <div class="big-col">
+    <app-gallery [images]="images"></app-gallery>
+  </div>
+  <div class="col">
+    <h2>{{ property.title }}</h2>
+    <strong>{{ property.public_id }}</strong>
+    <p-badge [value]="property.property_type"></p-badge>
+
+    {{ property.location.name }}
+  </div>
+</div>
+<div class="description">
+  {{ property.description }}
+</div>

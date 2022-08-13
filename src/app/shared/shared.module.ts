@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import { BadgeModule } from 'primeng/badge';
 import { GalleriaModule } from 'primeng/galleria';
 
 
@@ -29,6 +30,7 @@ const materialModules = [
 ]
 
 const primeNGModules = [
+  BadgeModule,
   GalleriaModule
 ]
 

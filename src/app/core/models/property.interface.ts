@@ -1,3 +1,5 @@
+import { PropertyLocation } from "./location.interface";
+
 export interface Property {
     public_id: string;
     title: string;
@@ -28,7 +30,7 @@ export interface Property {
     property_files: any[];
     videos: any[];
     virtual_tour: string;
-    location: any;
+    location: PropertyLocation;
     tags: any[];
     show_prices: boolean;
     share_commission: boolean;
