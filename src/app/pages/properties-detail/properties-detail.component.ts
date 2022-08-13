@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/core/services/api.service';
+import { ActivatedRoute } from '@angular/router';
 
-import { environment } from 'src/environments/environment.local';
 
 @Component({
   selector: 'app-properties-detail',
@@ -10,17 +9,16 @@ import { environment } from 'src/environments/environment.local';
 })
 export class PropertiesDetailComponent implements OnInit {
 
-  properties!: any[];
+  property_id!: number;
+  property: any;
 
   constructor(
-    private apiSvc: ApiService
-  ) { }
+    private route: ActivatedRoute
+  ) {
+    this.property_id = this.route.snapshot.params['id'];
+   }
 
   ngOnInit(): void {
-    this.apiSvc.get<any>(environment.apiUrl + environment.apiUrlProperties, null, true).subscribe(res=>{
-      this.properties = res.content;
-      console.log(this.properties)
-    })
   }
 
 }

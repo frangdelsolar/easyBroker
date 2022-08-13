@@ -1,6 +1,7 @@
-<div *ngFor="let property of properties">
-  <strong>{{ property.public_id }}</strong>
-  <h3>{{ property.title }}</h3>
-  <img [src]="property.title_image_thumb" alt="" />
-  <p>{{ property.location }}</p>
-</div>
+<strong>{{ property.public_id }}</strong>
+<h3>{{ property.title }}</h3>
+<img
+  [src]="property.property_images[0].url"
+  alt="property.property_images[0].name"
+/>
+<p>{{ property.location.name }}</p>

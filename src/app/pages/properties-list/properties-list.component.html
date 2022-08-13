@@ -1,1 +1,12 @@
-<p>properties-list works!</p>
+<div class="container">
+  <div *ngFor="let property of properties | async" class="box">
+    <app-property-box [property]="property"></app-property-box>
+  </div>
+</div>
+<mat-paginator
+  [length]="pagination.total"
+  [pageSize]="pagination.limit"
+  (page)="paginate($event)"
+  aria-label="Seleccionar página"
+>
+</mat-paginator>

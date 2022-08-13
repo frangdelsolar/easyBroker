@@ -1,0 +1,20 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{ property.title }}</mat-card-title>
+    <mat-card-subtitle>{{ property.public_id }}</mat-card-subtitle>
+  </mat-card-header>
+  <img
+    mat-card-image
+    [src]="property.title_image_thumb"
+    alt="Photo of a Shiba Inu"
+  />
+  <mat-card-content>
+    <ul>
+      <li>Tipo: {{ property.property_type }}</li>
+      <li>Ubicacion: {{ property.location }}</li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <a mat-button href="/{{ property.public_id }}" target="_blank">Ver</a>
+  </mat-card-actions>
+</mat-card>

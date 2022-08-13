@@ -15,10 +15,11 @@ export class PropertyService {
   constructor(private adminSvc: PrivateApiService) {}
 
   public getAll(params: string|null=null){
+    let url = this._apiUrl
     if(params){
-      this._apiUrl += params;
+      url = this._apiUrl + params;
     }
-    return this.adminSvc.get<PropertyList>(this._apiUrl, null, true);
+    return this.adminSvc.get<PropertyList>(url, null, true);
   }
 
   public getById(id: string){
