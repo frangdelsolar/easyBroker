@@ -1,0 +1,39 @@
+<form [formGroup]="form" id="contact-form">
+  <span class="p-float-label">
+    <input [formControl]="nameControl" id="name-input" type="text" pInputText />
+    <label for="name-input">Nombre</label>
+  </span>
+
+  <span class="p-float-label">
+    <input
+      [formControl]="phoneControl"
+      id="phone-input"
+      type="text"
+      pInputText
+    />
+    <label for="phone-input">Teléfono</label>
+  </span>
+
+  <span class="p-float-label">
+    <input
+      [formControl]="emailControl"
+      id="email-input"
+      type="text"
+      pInputText
+    />
+    <label for="email-input">Email</label>
+  </span>
+
+  <span class="p-float-label">
+    <textarea
+      [formControl]="msgControl"
+      id="msg-input"
+      pInputTextarea
+    ></textarea>
+    <label for="msg-input">Mensaje</label>
+  </span>
+
+  <button mat-flat-button color="primary" (click)="onContactFormSubmit()">
+    Enviar
+  </button>
+</form>

@@ -22,19 +22,22 @@ export class PropertiesDetailComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.propertySvc.getById(this.property_id).subscribe(prop => {
-      this.property = prop;
-      
-      for (let image of prop.property_images){
-        this.images.push({
-            previewImageSrc: image.url,
-            thumbnailImageSrc: image.url,
-            alt: image.title,
-            title: image.title,
-        })
+    this.propertySvc.getById(this.property_id).subscribe(
+      (prop) => {
+          this.property = prop;
+          for (let image of prop.property_images){
+            this.images.push({
+                previewImageSrc: image.url,
+                thumbnailImageSrc: image.url,
+                alt: image.title,
+                title: image.title,
+            })
+          }
+      },
+      (err)=>{
+        alert(err.error.error)
       }
-      
-    })
+    )
   }
 
 }

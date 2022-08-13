@@ -12,18 +12,18 @@ export class PropertyService {
   
   _apiUrl = environment.apiUrl + environment.apiUrlProperties;
 
-  constructor(private adminSvc: PrivateApiService) {}
+  constructor(private privateSvc: PrivateApiService) {}
 
   public getAll(params: string|null=null){
     let url = this._apiUrl
     if(params){
       url = this._apiUrl + params;
     }
-    return this.adminSvc.get<PropertyList>(url, null, true);
+    return this.privateSvc.get<PropertyList>(url, null, true);
   }
 
   public getById(id: string){
-    return this.adminSvc.get<Property>(this._apiUrl, id, true);
+    return this.privateSvc.get<Property>(this._apiUrl, id, true);
   }
 
 }

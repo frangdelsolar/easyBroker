@@ -8,6 +8,7 @@
     <p-badge [value]="property.property_type"></p-badge>
 
     {{ property.location.name }}
+    <app-contact-form [params]="{ id: property.public_id }"></app-contact-form>
   </div>
 </div>
 <div class="description">

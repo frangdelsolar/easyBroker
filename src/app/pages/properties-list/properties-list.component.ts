@@ -34,10 +34,15 @@ export class PropertiesListComponent implements OnInit {
 
   loadProperties(){
     let params: string = `?page=${this.pagination.page}&limit=${this.pagination.limit}&search%5Bstatuses%5D%5B%5D=published`;
-    this.propertySvc.getAll(params).subscribe(props => {
-      this.properties.next(props.content);
-      this.pagination = props.pagination;
-    })
+    this.propertySvc.getAll(params).subscribe(
+      (props) => {
+        this.properties.next(props.content);
+        this.pagination = props.pagination;
+      },
+      (err)=>{
+        alert(err.error.error)
+      }
+    )
   }
 
   paginate(ev: any){
