@@ -9,7 +9,9 @@ import { ContactService } from 'src/app/core/services/contact.service';
 })
 export class ContactFormComponent implements OnInit {
 
-  @Input() params!: any;
+  @Input() params:any = {
+    id:""
+  };
   form!: FormGroup;
   nameControl = new FormControl('', [Validators.required]);
   phoneControl = new FormControl('', [Validators.required]);

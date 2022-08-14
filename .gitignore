@@ -43,3 +43,5 @@ Thumbs.db
 
 #Local
 environment.local.ts
+.coveralls.yml
+.travis.yml

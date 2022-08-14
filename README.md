@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+###### NOTES
+
+I would have liked to:
+
+- translate pagination
+- be more aware of responsiveness
+- placeholder for gallery when images are missing
+- proper toast for success and error messages, not browser's tool.
+- better design decisions (color, font-sizes, etc.)
