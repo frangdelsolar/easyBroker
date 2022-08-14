@@ -21,9 +21,7 @@ export class ContactFormComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private contactSvc: ContactService
-  ) {
-
-   }
+  ) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -39,7 +37,7 @@ export class ContactFormComponent implements OnInit {
   onContactFormSubmit(){
     this.contactSvc.create(this.form.value).subscribe(
       (res:any)=>{
-        alert("Mensaje enviado correctamente")
+        confirm("Mensaje enviado correctamente")
         this.form.reset();
       },
       (err)=>{

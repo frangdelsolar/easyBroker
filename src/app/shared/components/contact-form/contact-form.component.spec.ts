@@ -93,8 +93,21 @@ describe('Test ContactFormComponent', () => {
       component = fixture.componentInstance;
       fixture.detectChanges();
     });
-   
-    it("Should call onContactFormSubmit when the form is valid",async ()=>{
+
+    it("Enviar button should be disabled if form is invalid", () => {
+      expect(fixture.nativeElement.querySelector("#btn-submit").disabled).toBeTrue();
+    })
+
+    it("Enviar button should be available if form is valid", () => {
+      component.form.get('name')?.setValue('name');
+      component.form.get('email')?.setValue('email@email.com');
+      component.form.get('phone')?.setValue('123123123');      
+      component.form.get('message')?.setValue('TestMessage');
+      fixture.detectChanges();
+      expect(fixture.nativeElement.querySelector("#btn-submit").disabled).toBeFalse();
+    })
+  
+    it("Should call onContactFormSubmit when Enviar button is clicked",async ()=>{
       const spy = spyOn(component, 'onContactFormSubmit');
       component.form.get('name')?.setValue('name');
       component.form.get('email')?.setValue('email@email.com');
