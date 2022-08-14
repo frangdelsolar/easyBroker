@@ -5,8 +5,8 @@ export interface Property {
     title: string;
     property_images: any[];
     description?: string;
-    bedrooms?: number;
-    bathrooms?: number;
+    bedrooms?: number|null;
+    bathrooms?: number|null;
     half_bathrooms?: number | null;
     parking_spaces?: number | null;
     lot_size?: number | null;

@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 import { MatButtonModule } from '@angular/material/button';
@@ -22,7 +21,6 @@ import { HeaderComponent } from './components/header/header.component';
 
 const myComponents = [
   ContactFormComponent,
-  FooterComponent,
   GalleryComponent,
   HeaderComponent,
   ToolbarComponent,

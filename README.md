@@ -35,3 +35,18 @@ I would have liked to:
 - placeholder for gallery when images are missing
 - proper toast for success and error messages, not browser's tool.
 - better design decisions (color, font-sizes, etc.)
+- Footer
+- navegacion al listado de propiedades
+- tarjeta de propiedades mejorada
+- better testing
+  [x] properties detail image processing should be a separate function
+
+- Imagen de home
+- Imagen de detail
+- Video de pagination
+- Video de form submission
+- Imagen form success
+- Imagen form error
+
+- Test coverage
+- Imagen test coverage

@@ -25,19 +25,24 @@ export class PropertiesDetailComponent implements OnInit {
     this.propertySvc.getById(this.property_id).subscribe(
       (prop) => {
           this.property = prop;
-          for (let image of prop.property_images){
-            this.images.push({
-                previewImageSrc: image.url,
-                thumbnailImageSrc: image.url,
-                alt: image.title,
-                title: image.title,
-            })
-          }
+          this.processImagesResponse(prop.property_images);
       },
       (err)=>{
         alert(err.error.error)
       }
     )
+  }
+
+
+  processImagesResponse(images:any[]){
+    for (let image of images){
+      this.images.push({
+          previewImageSrc: image.url,
+          thumbnailImageSrc: image.url,
+          alt: image.title,
+          title: image.title,
+      })
+    }
   }
 
 }

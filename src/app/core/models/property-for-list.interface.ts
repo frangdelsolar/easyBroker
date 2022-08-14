@@ -1,16 +1,18 @@
 export interface PropertyForList{
-    agent: string;
+    agent?: string|null;
     public_id: string;
-    title: string;
-    title_image_full: string;
-    title_image_thumb: string;
-    bedrooms: number;
-    bathrooms: number;
-    parking_spaces: number;
-    location: string;
-    property_type: string;
-    updated_at: string;
-    show_prices: boolean;
-    share_commission: boolean;
-    operations: any[];
+    title?: string|null;
+    title_image_full?: string|null;
+    title_image_thumb?: string|null;
+    bedrooms?: number|null;
+    bathrooms?: number|null;
+    parking_spaces?: number|null;
+    location?: string|null;
+    property_type?: string|null;
+    updated_at?: string|null;
+    show_prices?: boolean|null;
+    share_commission?: boolean|null;
+    operations?: any[]|null;
+    lot_size?: number|null;
+    construction_size?: number|null;
 }

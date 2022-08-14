@@ -12,14 +12,10 @@ export class PrivateApiService {
   constructor(private http: HttpClient) {
     
     let token = API_TOKEN;
-
-    if (token) {
-      token = `${token}`;
-      this._headers = new HttpHeaders({
-        'X-Authorization': token,
-        'accept': 'application/json',
-      });
-    }
+    this._headers = new HttpHeaders({
+      'X-Authorization': token,
+      'accept': 'application/json',
+    });
   }
 
   public get<T>(url: string, id: string|null, activateHeader: boolean = false): Observable<T> {

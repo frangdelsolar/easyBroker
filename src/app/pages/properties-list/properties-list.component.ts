@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Pagination } from 'src/app/core/models/pagination.interface';
-import { PropertyForList } from 'src/app/core/models/property-for-list.interface';
 import { PropertyService } from 'src/app/core/services/property.service';
-
 
 
 @Component({
@@ -17,7 +15,7 @@ export class PropertiesListComponent implements OnInit {
 
   pagination: Pagination = {
     limit: 15,
-    page: 0,
+    page: 15,
     total: 0,
     next_page: ""
   };
