@@ -2,14 +2,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { API_TOKEN } from 'src/environments/environment';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: "root",
 })
 export class PrivateApiService {
   private _headers!: HttpHeaders;
-  
 
   constructor(private http: HttpClient) {
     
@@ -42,28 +40,5 @@ export class PrivateApiService {
       activateHeader ? { headers: this._headers } : {}
       );
   }
-
-  public put<T>(url: string, body: any, id: string, activateHeader: boolean = false): Observable<T> {
-    return this.http.put<T>(
-      `${url}/${id}/`, 
-      body, 
-      activateHeader ? { headers: this._headers } : {}
-      );
-  }
-
-  public patch<T>(url: string, body : {}, activateHeader: boolean = true): Observable<T> {
-    return this.http.patch<T>(
-      url,
-      body ? body : {},
-      activateHeader ? { headers: this._headers } : {}
-    );
-  }
-
-  public delete<T>(url: string, id: string, activateHeader: boolean = true): Observable<T> {
-    return this.http.delete<T>(
-      `${url}/${id}/`,
-      activateHeader ? { headers: this._headers } : {}
-    );
-  }
-  
+ 
 }

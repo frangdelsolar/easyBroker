@@ -9,7 +9,7 @@ export interface PropertyForList{
     parking_spaces: number;
     location: string;
     property_type: string;
-    updated_at: Date;
+    updated_at: string;
     show_prices: boolean;
     share_commission: boolean;
     operations: any[];

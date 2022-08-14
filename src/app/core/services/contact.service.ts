@@ -13,7 +13,6 @@ export class ContactService {
   constructor(private privateSvc: PrivateApiService) {}
 
   public create(body: ContactRequest){
-    return this.privateSvc.post<ContactRequest>(this._apiUrl, body, true);
+    return this.privateSvc.post(this._apiUrl, body, true);
   }
-
 }
