@@ -26,27 +26,39 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-###### NOTES
+## NOTES
 
-I would have liked to:
+I found the project to be good learning experience for me. Overall, I am quite happy with the results I was able to achieve within the given timeframe. I believe the most remarkable points of my implementation are the ui elements and the basic functionality.
 
-- translate pagination
-- be more aware of responsiveness
-- placeholder for gallery when images are missing
-- proper toast for success and error messages, not browser's tool.
-- better design decisions (color, font-sizes, etc.)
-- Footer
-- navegacion al listado de propiedades
-- tarjeta de propiedades mejorada
-- better testing
-  [x] properties detail image processing should be a separate function
+The Property List page displays a list of fifteen cards with the requested details and a thumbnail as well as a link to the Property Detail page. There is also a pagination section, so that the server doesn't overload and user can still navigate through the entire list of published properties.
 
-- Imagen de home
-- Imagen de detail
-- Video de pagination
-- Video de form submission
-- Imagen form success
-- Imagen form error
+The Property Detail Page shows the information related to the specific property: title, description and public id. There is also a carousel for all the images the property object retrieves. Finally, this page contains a contact form where the user can send a request about the property that is on screen (property id is a hidden field that is also sent along with the details the user fills).
 
-- Test coverage
-- Imagen test coverage
+**_ Testing _**
+
+Overall, there is an 85.89% test coverage of the code. Although, all the tests are successful, there is still room for improvements.
+
+**_ Known Limitations _**
+
+- Property list page
+
+* If property is missing thumbnail, no placeholder is set.
+* Pagination is missing spanish translation.
+
+- Property detail page
+
+* If you fill the form with good data, you will be able to submit. The form will clear up after success response. In this case, you could try to send a new message, but the source will be lost as a consequence of the form clearing. Submit button will still be clickable, but action will fail unless page refresh.
+* There is no way to navigate back to the property list page.
+* If the property response is missing images, gallery will be empty without a proper placeholder.
+
+- UX
+
+* Website is not responsive and not mobile friendly.
+
+**_ Posible improvements _**
+
+- Toolbar and Footer navigation tree
+- Breadcrumbs
+- Toast Service for alerts
+- Design and branding
+- Social Media links
