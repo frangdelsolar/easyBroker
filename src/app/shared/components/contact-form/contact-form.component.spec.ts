@@ -1,13 +1,8 @@
-import { ComponentFixture, fakeAsync, TestBed, async, tick } from '@angular/core/testing';
-import { of} from 'rxjs';
+import { ComponentFixture, TestBed} from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { RouterTestingModule } from '@angular/router/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { Location } from "@angular/common";
-import { Router, Routes } from '@angular/router';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ContactFormComponent } from './contact-form.component';
-
 
 
 describe('Test ContactFormComponent', () => {
@@ -117,9 +112,8 @@ describe('Test ContactFormComponent', () => {
       fixture.nativeElement.querySelector("#btn-submit").click();
       expect(spy).toHaveBeenCalled();
     });
-  
-  });
 
+  });
 
 });
 
