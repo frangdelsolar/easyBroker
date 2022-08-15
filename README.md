@@ -48,20 +48,20 @@ Overall, there is an 85.89% test coverage of the code. Although, all the tests a
 
 **_ Known Limitations _**
 
-- Property list page
+#### Property list page
 
-* If property is missing thumbnail, no placeholder is set.
-* Pagination is missing spanish translation.
+- If property is missing thumbnail, no placeholder is set.
+- Pagination is missing spanish translation.
 
-- Property detail page
+#### Property detail page
 
-* If you fill the form with good data, you will be able to submit. The form will clear up after success response. In this case, you could try to send a new message, but the source will be lost as a consequence of the form clearing. Submit button will still be clickable, but action will fail unless page refresh.
-* ~There is no way to navigate back to the property list page.~
-* If the property response is missing images, gallery will be empty without a proper placeholder.
+- If you fill the form with good data, you will be able to submit. The form will clear up after success response. In this case, you could try to send a new message, but the source will be lost as a consequence of the form clearing. Submit button will still be clickable, but action will fail unless page refresh.
+- ~There is no way to navigate back to the property list page.~
+- If the property response is missing images, gallery will be empty without a proper placeholder.
 
-- UX
+#### UX
 
-* Website is not responsive and not mobile friendly.
+- Website is not responsive and not mobile friendly.
 
 **_ Posible improvements _**
 
