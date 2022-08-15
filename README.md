@@ -52,6 +52,9 @@ https://user-images.githubusercontent.com/54779433/184656498-3227a990-2ef1-47a1-
 
 Overall, there is an 85.89% test coverage of the code. Although, all the tests are successful, there is still room for improvements.
 
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/54779433/184657048-91d60df3-00ed-4bf6-93b6-a742e0db3056.png">  <img width="400" alt="image" src="https://user-images.githubusercontent.com/54779433/184657282-6a07d93c-d4af-4ae2-877e-227dc229b4de.png">
+
+
 **_ Known Limitations _**
 
 - Property list page
