@@ -30,9 +30,23 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 I found the project to be good learning experience for me. Overall, I am quite happy with the results I was able to achieve within the given timeframe. I believe the most remarkable points of my implementation are the ui elements and the basic functionality.
 
+This project uses both Material UI and PrimeNG components for UI. There is some basic css customization done by me in some elements.
+
 The Property List page displays a list of fifteen cards with the requested details and a thumbnail as well as a link to the Property Detail page. There is also a pagination section, so that the server doesn't overload and user can still navigate through the entire list of published properties.
 
+
+
+https://user-images.githubusercontent.com/54779433/184656472-a0f7f193-0b03-48e3-8ae7-213907ac52ec.mp4
+
+
+
 The Property Detail Page shows the information related to the specific property: title, description and public id. There is also a carousel for all the images the property object retrieves. Finally, this page contains a contact form where the user can send a request about the property that is on screen (property id is a hidden field that is also sent along with the details the user fills).
+
+
+
+https://user-images.githubusercontent.com/54779433/184656498-3227a990-2ef1-47a1-9a3e-a499650f1fa1.mp4
+
+
 
 **_ Testing _**
 
