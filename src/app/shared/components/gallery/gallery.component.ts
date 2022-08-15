@@ -12,6 +12,14 @@ export class GalleryComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    if (this.images.length <= 0){
+      this.images = [{
+        previewImageSrc: 'assets/property-placeholder_grande.webp',
+        thumbnailImageSrc: 'assets/property-placeholder_grande.webp',
+        alt: 'property placeholder',
+        title: 'property placeholder',
+      }]
+    }
   }
 
 }

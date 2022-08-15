@@ -15,7 +15,7 @@ export class PropertiesListComponent implements OnInit {
 
   pagination: Pagination = {
     limit: 15,
-    page: 15,
+    page: 1,
     total: 0,
     next_page: ""
   };

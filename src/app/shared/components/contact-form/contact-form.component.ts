@@ -30,11 +30,12 @@ export class ContactFormComponent implements OnInit {
       email: this.emailControl,
       message: this.msgControl,
       property_id: this.params.id,
-      source: '@franciscoGdelSolarEasyBrokerApp'
+      source: '',
     })
   }
 
   onContactFormSubmit(){
+    this.form.controls['source'].setValue('@franciscoGdelSolarEasyBrokerApp');
     this.contactSvc.create(this.form.value).subscribe(
       (res:any)=>{
         confirm(res.status)

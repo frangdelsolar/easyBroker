@@ -3,11 +3,7 @@
     <mat-card-title>{{ property.title }}</mat-card-title>
     <mat-card-subtitle>{{ property.public_id }}</mat-card-subtitle>
   </mat-card-header>
-  <img
-    mat-card-image
-    [src]="property.title_image_thumb"
-    [alt]="property.title"
-  />
+  <img mat-card-image [src]="imageUrl" [alt]="property.title" />
   <mat-card-content>
     <ul>
       <li>Tipo: {{ property.property_type }}</li>
